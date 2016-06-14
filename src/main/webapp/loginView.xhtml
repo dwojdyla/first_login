@@ -16,21 +16,21 @@
 			<p:layoutUnit position="center" closable="false" minSize="100"
 				maxSize="250" collapsible="true">
 				<h:form>
-					<p:panelGrid columns="2">
-					<<!-- User -->
-					<h: outputLabel value="Username: " />
-					<p: inputText value="#{user.name}"/>
-					
+				<p:panelGrid columns="2">
+				<!-- User -->
+					<h:outputLabel value="Username: " />
+					<p:inputText value="#{user.name}">
 					<f:validator validatorId="validator.LoginValidator" />
 					</p:inputText>
 					<!-- Passwort -->
 					<h:outputLabel value="Passwort: " />
 					<p:password value="#{user.password}" />
-	
+
 					</p:panelGrid>
+
 					<!-- Buttons mit Text user.login und msg.login -->
-					<p:commandButton id="submit" value="Login" action="#{user.login}" />
-					<p:commandButton id="submit" value="Login" action="#{msg.login}" />
+				<p:commandButton id="submit" value="Login" action="#{user.login}" />
+					<!--  <p: commandButton id="submit" value="Login" action="#{msg.login}" />-->
 				</h:form>
 			</p:layoutUnit>
 		</p:layout>
